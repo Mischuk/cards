@@ -1,9 +1,9 @@
-# Project
+# Логотип Компании
 
 ## Демо
-Смотреть: [frontende.info/project](http://frontende.info/project)
+Смотреть: [frontende.info/cardslp](http://frontende.info/cardslp/)
 
-Скачать: [project-master.zip](https://github.com/Mischuk/project/archive/master.zip)
+Скачать: [project-master.zip](https://github.com/Mischuk/cards/archive/master.zip)
 
 ## Описание
 * Сборщик [Gulp](http://gulpjs.com/)
