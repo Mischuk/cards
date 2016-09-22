@@ -1,0 +1,55 @@
+.m_s7
+  background url("../images/m_s7/bg.jpg") no-repeat 50%
+  background-size cover
+  color #fff
+  padding-bottom 55px
+  padding-top 40px
+  box-shadow inset 0 0 10px rgba(0,0,0,.25)
+  @media screen and (min-width: 1024px)
+    background-attachment fixed
+  @media screen and (max-width: 1200px)
+    text-align center
+    .b-line.white:after
+      left 50%
+      margin-left -48px
+  article
+    h1
+      font-size 32px
+      @media screen and (max-width: 1200px)
+        font-size 30px
+      @media screen and (max-width: 568px)
+        font-size 28px
+      &:after
+        left 0
+        margin-left 0
+    ul
+      light()
+      padding-left 90px
+      font-size 18px
+      @media screen and (max-width: 1200px)
+        text-align left
+        padding-left 45px
+        margin-bottom 30px
+        width 475px
+        margin-left auto
+        margin-right auto
+      @media screen and (max-width: 568px)
+        width 100%
+      li
+        position relative
+        padding 6px 0
+        &:after
+          anim()
+          content ''
+          size(10px)
+          position absolute
+          left -40px
+          top 12px
+          border-radius 50%
+          border 1px solid rgba(255,255,255,.5)
+          @media screen and (max-width: 1200px)
+            left -30px
+        &:hover
+          &:after
+            background #fff
+            border-color #fff

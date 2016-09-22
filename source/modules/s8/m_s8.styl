@@ -1,0 +1,98 @@
+.m_s8
+  padding-top 20px
+  padding-bottom 55px
+  background url(../images/bg.png) repeat 50%
+  @media screen and (min-width: 1024px)
+    background-attachment fixed
+  @media screen and (max-width: 568px)
+    padding-bottom 10px
+  .portfolio-carousel-nav
+    position relative
+    height 60px
+    line-height 60px
+    margin-top 55px
+    @media screen and (max-width: 568px)
+      margin-top 0px
+  .slick-dots
+    margin-bottom 0
+    button
+      background #dbdbdb
+  .slick-arrow
+    border-color $orange
+    &:hover
+      background $orange
+    &.slick-prev
+      left 20px
+      &:after
+        background: url(../images/sprite.png) no-repeat -258px -265px
+      &:hover
+        &:after
+          background-position -224px -266px
+    &.slick-next
+      right 20px
+      &:after
+        background url(../images/sprite.png) no-repeat -162px -267px
+      &:hover
+        &:after
+          background-position -195px -267px
+  .slide
+    padding 20px
+    background #fff
+    border-radius 15px
+    overflow hidden
+    .slide-wrap
+      box-shadow 0 4px 20px rgba(0,0,0,.25)
+      border-radius 15px
+      height 470px
+      overflow hidden
+    .header
+      height 150px
+      line-height 150px
+      text-align center
+      border-bottom 1px solid #c7c7c7
+      width 80%
+      margin 0 auto
+      img
+        display inline-block
+        vertical-align middle
+        max-width 90%
+    .body
+      position relative
+      .front
+        height 320px
+        img
+          width 100%
+          height 100%
+      .end
+        anim()
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        padding 0 10%
+        background rgba(255,255,255,0)
+        display none
+        &.active
+          display block
+          background rgba(255,255,255,.9)
+        ul
+          padding-top 40px
+          li
+            anim()
+            opacity 0
+            transform translateX(-15px)
+            position relative
+            margin-bottom 15px
+            font-size 15px
+            &.active
+              opacity 1
+              transform translateX(0px)
+            &:after
+              content ''
+              size(10px)
+              position absolute
+              left -20px
+              top 4px
+              border 1px solid #ef3148
+              border-radius 50%

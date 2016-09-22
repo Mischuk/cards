@@ -1,0 +1,96 @@
+.m_s2
+  padding-top 110px
+  padding-bottom 55px
+  background url("../images/bg.png") repeat 50%
+  @media screen and (min-width: 1024px)
+    background-attachment fixed
+  @media screen and (max-width: 1200px)
+    padding-top 0
+  @media screen and (max-width: 568px)
+    padding-bottom 25px
+  .columns
+    clearfix()
+    margin-top 40px
+    @media screen and (max-width: 568px)
+      margin-top 25px
+    .column
+      float left
+      width 25%
+      text-align center
+      @media screen and (max-width: 992px)
+        width 50%
+        &:nth-child(2n+1)
+          clear left
+          margin-bottom 35px
+      @media screen and (max-width: 460px)
+        width 100%
+        margin-bottom 25px
+        &:last-child
+          margin-bottom 0
+      &:hover
+        @media screen and (min-width: 568px)
+          .icon
+            lg-orange()
+            > div
+              animation scaling .5s cubic-bezier(.33,.66,.66,1)
+      &:nth-child(1)
+        .icon > div
+          background: url('../images/sprite.png') no-repeat -11px -86px;
+          width: 71px;
+          height: 69px;
+        &:hover
+          @media screen and (min-width: 568px)
+            .icon > div
+              background-position -11px -172px
+      &:nth-child(2)
+        .icon > div
+          background: url('../images/sprite.png') no-repeat -126px -86px;
+          width: 36px;
+          height: 69px;
+        &:hover
+          @media screen and (min-width: 568px)
+            .icon > div
+              background-position -126px -168px
+      &:nth-child(3)
+        .icon > div
+            background: url('../images/sprite.png') no-repeat -198px -86px;
+            width: 71px;
+            height: 64px;
+        &:hover
+          @media screen and (min-width: 568px)
+            .icon > div
+              background-position -202px -168px
+      &:nth-child(4)
+        .icon > div
+            background: url('../images/sprite.png') no-repeat -313px -89px;
+            width: 67px;
+            height: 64px;
+        &:hover
+          @media screen and (min-width: 568px)
+            .icon > div
+              background-position -313px -171px
+      .icon
+        size(140px)
+        margin 0 auto
+        border-radius 0
+        line-height 140px
+        border-radius 50%
+        @media screen and (max-width: 568px)
+          size(100px)
+          line-height 100px
+        > div
+          display inline-block
+          vertical-align middle
+
+      .title
+        bold()
+        text-transform uppercase
+        margin-top 20px
+        margin-bottom 30px
+        @media screen and (max-width: 568px)
+          margin-bottom 10px
+          margin-top 5px
+      .desc
+        color #8c8c8c
+        font-size 14px
+        padding 0 20px

@@ -1,0 +1,78 @@
+.m_s1
+  height 680px
+  padding-top 72px
+  background url("../images/m_s1/bg.jpg") no-repeat 50%
+  background-size cover
+  @media screen and (max-width: 1200px)
+    height auto
+  @media screen and (max-width: 460px)
+    padding-top 115px
+  .wrapper
+    @media screen and (max-width: 1200px)
+      padding 0
+  h1, p
+    color #fff
+    br
+      @media screen and (max-width: 568px)
+        display none
+  > h1, > p
+    tsh()
+  h1, p
+    @media screen and (max-width: 568px)
+      padding-left 10px
+      padding-right 10px
+  p
+    light()
+    font-size 26px
+    @media screen and (max-width: 1200px)
+      font-size 21px
+  .countdown
+    position absolute
+    left 0
+    bottom 0
+    height 290px
+    width 100%
+    background $orange
+    color #fff
+    padding 40px
+    border-radius $radius $radius 0 0
+    @media screen and (max-width: 1200px)
+      bottom -350px
+      width 100%
+      border-radius 0
+      position static
+      margin-top 0px
+      height auto
+      text-align center
+    @media screen and (max-width: 568px)
+      padding 15px
+    .cards
+      position absolute
+      bottom -105px
+      right 390px
+      width 522px
+      height 312px
+      background url("../images/m_s1/cards.png") no-repeat 0 0
+      @media screen and (max-width: 1200px)
+        display none
+    h2
+      text-transform uppercase
+      margin-bottom 25px
+    p
+      font-size 18px
+      margin-bottom 0
+      &.large
+        font-size 30px
+        line-height 2
+    .clock
+      margin-top 10px
+      @media screen and (max-width: 1200px)
+        margin-bottom 35px
+      b
+        black()
+        font-size 40px
+      span
+        font-size 16px
+        text-transform uppercase
+        & + b
+          margin-left 30px

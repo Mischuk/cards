@@ -1,0 +1,128 @@
+.m_s5
+  background url("../images/m_s5/bg.jpg") no-repeat 50%
+  background-size cover
+  padding-bottom 55px
+  box-shadow inset 0 0 10px rgba(0,0,0,.25)
+  @media screen and (min-width: 1024px)
+    background-attachment fixed
+  .columns
+    clearfix()
+    padding 0 15px
+    .column
+      float left
+      width 31.5%
+      margin-left 2.5%
+      background #fff
+      box-shadow 0 4px 20px rgba(0,0,0,.25)
+      border-radius $radius
+      border 5px solid #fff
+      @media screen and (max-width: 767px)
+        width 100%
+        margin-left 0
+        margin-bottom 30px !important
+      &:first-child
+        margin 0
+      &:nth-child(1) .title:after
+        lg-orange()
+      &:nth-child(2) .title:after
+        lg-pink-vertical()
+      &:nth-child(3) .title:after
+        lg-violet()
+  .title
+    black()
+    position relative
+    height 120px
+    line-height 90px
+    text-align center
+    font-size 22px
+    text-transform uppercase
+    color #fff
+    background url("../images/m_s5/header.png") no-repeat 50%
+    background-size cover
+    border-radius $radius $radius 0 0
+    overflow hidden
+    &:after
+      content ''
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      opacity .8
+    span
+      position relative
+      z-index 1
+  .price
+    light()
+    width 220px
+    line-height 75px
+    height 75px
+    border 1px solid #e6e6e6
+    border-radius 40px
+    text-align center
+    margin-left auto
+    margin-right auto
+    margin-top -40px
+    position relative
+    z-index 1
+    background #fff
+    @media screen and (max-width: 992px)
+      width 175px
+    b
+      bold()
+      font-size 26px
+  .list
+    margin 15px 0
+    padding 0 15px
+    li
+      light()
+      position relative
+      padding 10px 0
+      padding-left 40px
+      font-size 15px
+      counter-increment step-counter
+      &:before
+        content counter(step-counter)
+        font-size 22px
+        color #c1c1c1
+        light()
+        position absolute
+        left 0
+        top 6px
+        text-align center
+        width 40px
+      & + li
+        border-top 1px solid #e6e6e6
+  .action
+    height 60px
+    width 190px
+    margin 20px auto 40px
+    @media screen and (max-width: 568px)
+      margin-bottom 15px
+    a
+      transition all 0.15s cubic-bezier(.33,.66,.66,1)
+      position relative
+      display block
+      width 100%
+      height 100%
+      border-radius 50px
+      border 1px solid #ee2840
+      text-transform uppercase
+      color #ee2840
+      text-align center
+      line-height 58px
+      box-shadow 4px 0 20px rgba(0,0,0,.12)
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -104px -289px;
+        width: 7px;
+        height: 11px;
+        position absolute
+        right 25px
+        top 50%
+        margin-top -5.5px
+      &:hover
+        background #ee2840
+        color #fff
+        &:after
+          background-position -82px -270px

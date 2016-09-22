@@ -1,0 +1,79 @@
+h1, h2, h3, h4, h5, h6
+  line-height 1.2
+  b
+    black()
+
+h1
+  light()
+  position relative
+  text-transform uppercase
+  padding 55px 0
+  font-size 35px
+  @media screen and (max-width: 1200px)
+    font-size 30px
+  @media screen and (max-width: 568px)
+    font-size 24px
+    padding 25px 0
+  &:after
+    bottom 27px
+    @media screen and (max-width: 568px)
+      bottom 12px
+  span.light
+    light()
+    color #919191
+    font-size 32px
+    @media screen and (max-width: 1200px)
+      font-size 30px
+    @media screen and (max-width: 568px)
+      font-size 24px
+      text-transform none
+    b
+      bold()
+      color #919191
+    &.small
+      font-size 20px
+      text-transform initial
+      b
+        font-size 20px
+h2
+  font-size 32px
+  @media screen and (max-width: 1200px)
+    font-size 28px
+  @media screen and (max-width: 568px)
+    font-size 22px
+h3
+  font-size 24px
+h4
+  font-size 18px
+h5
+  font-size 14px
+h6
+  font-size 12px
+b
+  bold()
+p
+  margin-top 0
+  margin-bottom 20px
+  br
+    @media screen and (max-width: 568px)
+      display none
+
+
+tsh()
+  text-shadow 1px 1px 1px rgba(0,0,0,.5)
+
+.b-line
+  &:after
+    content ''
+    width 96px
+    height 2px
+    position absolute
+    left 50%
+    margin-left -(@width/2)
+    z-index 10
+  &.white:after
+    background #fff
+  &.orange:after
+    background $orange
+  &.half:after
+    opacity .5

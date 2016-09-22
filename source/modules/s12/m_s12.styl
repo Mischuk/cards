@@ -1,0 +1,52 @@
+.m_s12
+  height 440px
+  background url("../images/m_s12/bg.jpg") no-repeat 50%
+  background-size cover
+  @media screen and (min-width: 1024px)
+    background-attachment fixed
+  @media screen and (max-width: 1200px)
+    height auto
+    padding-bottom 55px
+  @media screen and (max-width: 568px)
+    padding-bottom 25px
+  .countdown
+    margin-top 90px
+    height 290px
+    width 100%
+    color #fff
+    padding 40px
+    border-radius $radius $radius 0 0
+    @media screen and (max-width: 1200px)
+      height auto
+      text-align center
+      padding 0
+    @media screen and (max-width: 568px)
+      margin-top 25px
+    h2
+      text-transform uppercase
+      margin-bottom 25px
+      font-size 30px
+      @media screen and (max-width: 568px)
+        font-size 28px
+    p
+      font-size 18px
+      margin-bottom 0
+      @media screen and (max-width: 568px)
+        b
+          display inline-block
+          vertical-align middle
+      &.large
+        font-size 30px
+        line-height 2
+    .clock
+      margin-top 10px
+      @media screen and (max-width: 1200px)
+        margin-bottom 30px
+      b
+        black()
+        font-size 40px
+      span
+        font-size 16px
+        text-transform uppercase
+        & + b
+          margin-left 30px

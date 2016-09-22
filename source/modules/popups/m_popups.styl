@@ -1,0 +1,39 @@
+.popup
+  position relative
+  padding 40px 20px
+  max-width 475px
+  margin 40px auto
+  border-radius $radius
+  #modal-title
+    display inline !important
+  .m_default-form
+    position static
+  .mfp-close
+    right -10px
+    top 50px
+    color #dfdfdf
+    font-size 36px
+    @media screen and (max-width: 568px)
+      right 25px
+    &:hover
+      color #fb3a52
+  .close
+    a
+      transition all 0.15s cubic-bezier(.33,.66,.66,1)
+      position relative
+      display block
+      width 200px
+      margin 0 auto
+      height 100%
+      border-radius 50px
+      border 1px solid #ee2840
+      text-transform uppercase
+      text-align center
+      line-height 58px
+      box-shadow 4px 0 20px rgba(0,0,0,.12)
+      background #ee2840
+      color #fff
+      font-size 16px
+      &:hover
+        background #ee2840 - 15%
+        border-color #ee2840 - 15%

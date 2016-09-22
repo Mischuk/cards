@@ -1,0 +1,48 @@
+.m_s11
+  background url("../images/m_s11/bg.jpg") no-repeat 50%
+  background-size cover
+  height 420px
+  color #fff
+  @media screen and (max-width: 992px)
+    height auto
+    padding-bottom 55px
+  @media screen and (max-width: 568px)
+    padding-bottom 5px
+  .columns
+    clearfix()
+    margin-top 40px
+    .column
+      position relative
+      float left
+      width 25%
+      padding-left 90px
+      padding-right 15px
+      @media screen and (max-width: 992px)
+        width 50%
+        margin-bottom 70px
+        &:nth-child(2n+1)
+          clear left
+      @media screen and (max-width: 568px)
+        width 100%
+        margin-bottom 35px
+  .eq
+    position absolute
+    width 65px
+    height 65px
+    top 50%
+    left 15px
+    margin-top -(@height/2)
+    border 1px solid #fff
+    border-radius 50%
+    padding 5px
+    text-align center
+    span
+      light()
+      display block
+      width 100%
+      height 100%
+      border-radius 50%
+      background rgba(255,255,255,.6)
+      color #b85c00
+      font-size 30px
+      line-height 50px

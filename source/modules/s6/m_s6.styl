@@ -1,0 +1,113 @@
+.m_s6
+  background url(../images/bg.png) repeat 50%
+  @media screen and (min-width: 1024px)
+    background-attachment fixed
+  .columns
+    margin-top 40px
+    clearfix()
+    .column
+      float left
+      width 33.333%
+      margin-bottom 55px
+      @media screen and (min-width: 768px)
+        &:nth-child(3n+1)
+          clear left
+      @media screen and (max-width: 767px)
+        width 50%
+        &:nth-child(2n+1)
+          clear left
+      @media screen and (max-width: 568px)
+        margin-bottom 25px
+      @media screen and (max-width: 460px)
+        width 100%
+  .column
+    text-align center
+    @media screen and (min-width: 568px)
+      &:hover
+        .icon
+          lg-orange()
+          > div
+            animation scaling .5s cubic-bezier(.33,.66,.66,1)
+    &:nth-child(1)
+      .icon > div
+        background: url('../images/m_s6/icons.png') no-repeat 0 0;
+        width: 51px;
+        height: 53px;
+      &:hover
+        @media screen and (min-width: 568px)
+          .icon > div
+            background-position -4px -130px
+    &:nth-child(2)
+      .icon > div
+        background: url('../images/m_s6/icons.png') no-repeat -70px 0;
+        width: 58px;
+        height: 40px;
+      &:hover
+        @media screen and (min-width: 568px)
+          .icon > div
+            background-position -74px -130px
+    &:nth-child(3)
+      .icon > div
+          background: url('../images/m_s6/icons.png') no-repeat -147px -4px;
+          width: 58px;
+          height: 45px;
+      &:hover
+        @media screen and (min-width: 568px)
+          .icon > div
+            background-position -151px -134px
+    &:nth-child(4)
+      .icon > div
+          background: url('../images/m_s6/icons.png') no-repeat -4px -70px;
+          width: 59px;
+          height: 38px;
+      &:hover
+        @media screen and (min-width: 568px)
+          .icon > div
+            background-position -8px -200px
+    &:nth-child(5)
+      .icon > div
+          background: url('../images/m_s6/icons.png') no-repeat -104px -65px;
+          width: 43px;
+          height: 43px;
+      &:hover
+        @media screen and (min-width: 568px)
+          .icon > div
+            background-position -108px -195px
+    &:nth-child(6)
+      .icon > div
+          background: url('../images/m_s6/icons.png') no-repeat -176px -60px;
+          width: 53px;
+          height: 53px;
+      &:hover
+        @media screen and (min-width: 568px)
+          .icon > div
+            background-position -180px -190px
+    .icon
+      size(140px)
+      margin 0 auto
+      border-radius 0
+      line-height 140px
+      border-radius 50%
+      @media screen and (max-width: 568px)
+        size(100px)
+        line-height 100px
+      > div
+        display inline-block
+        vertical-align middle
+
+    .title
+      bold()
+      text-transform uppercase
+      margin-top 20px
+      margin-bottom 30px
+      height 40px
+      @media screen and (max-width: 568px)
+        height auto
+        margin-top 0
+        margin-bottom 10px
+    .desc
+      color #8c8c8c
+      font-size 16px
+      padding 0 20px
+      span
+        color #ee2840
