@@ -1,19 +1,16 @@
 // Mobile burger button
-.mobile-menu-trigger
+.sidebarmenu a
   anim()
   display block
   position absolute
   z-index 10
   top 50%
-  right 25px
+  right 5px
   height 40px
+  width 40px
   margin-top -(@height/2)
   border 2px solid transparent
-  cursor pointer
-  @media screen and (min-width: 1200px)
-    display none
-  @media screen and (max-width: 460px)
-    top 20px
+  cursor pointer  
   &:after,
   &:before,
   span
@@ -24,7 +21,7 @@
     width 20px
     margin-left -10px
     height 2px
-    background #000
+    background #ff5b0b
   &:before
     top 10px
   &:after

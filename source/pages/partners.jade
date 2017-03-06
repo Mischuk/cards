@@ -1,0 +1,204 @@
+doctype html
+html(lang="ru").no-js
+  head
+    title Cards
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="css/plugins.css")
+    link(rel="stylesheet" href="css/app.min.css")
+  body
+    .m_header
+      .wrapper
+        .logo: a(href="index.html")  
+        .contacts
+          .vertical-outer
+            .vertical-inner
+              //- span.action: a(class="get-popup-action" href="#popup-action") Активация
+              span.sidebarmenu: a(href="#menu"): span
+    #page.content
+      .m_partners
+        .lead
+          .wrapper
+            .vertical-outer
+              .vertical-inner
+                h1 подарочные карты и сертификаты <br>от наших партнеров, на все случаи жизни!
+        .list
+          .wrapper
+            .mobile-filter
+              select(id="partner-filters-mobile")
+                option(value="electronics") Электроника и техника
+                option(value="perfumery") Парфюмерия и косметика
+                option(value="kids") Товары для детей
+                option(value="beauty") Красота и здоровье
+                option(value="gifts") Подарки
+                option(value="accessories") Аксессуары
+                option(value="books") Книги
+                option(value="clothes") Одежда и обувь
+                option(value="home") Товары для дома и кухни
+                option(value="hobby") Хобби и досуг
+                option(value="sports") спортивные товары
+                option(value="cafes") кафе и рестораны
+            .sidebar
+              .title Категории сертификатов
+              ul
+                li: a(class="current" data-filter="electronics" href="#") Электроника и техника
+                li: a(data-filter="perfumery" href="#") Парфюмерия и косметика
+                li: a(data-filter="kids" href="#") Товары для детей
+                li: a(data-filter="beauty" href="#") Красота и здоровье
+                li: a(data-filter="gifts" href="#") Подарки
+                li: a(data-filter="accessories" href="#") Аксессуары
+                li: a(data-filter="books" href="#") Книги
+                li: a(data-filter="clothes" href="#") Одежда и обувь
+                li: a(data-filter="home" href="#") Товары для дома и кухни
+                li: a(data-filter="hobby" href="#") Хобби и досуг
+                li: a(data-filter="sports" href="#") спортивные товары
+                li: a(data-filter="cafes" href="#") кафе и рестораны
+            .items
+              -
+                var items_filter = [
+                  { current: 'current', image: '1.png', filters: 'electronics'},
+                  { current: '', image: '2.png', filters: 'perfumery'},
+                  { current: '', image: '3.png', filters: 'kids'},
+                  { current: '', image: '4.png', filters: 'beauty'},
+                  { current: '', image: '5.png', filters: 'gifts'},
+                  { current: '', image: '6.png', filters: 'accessories'},
+                  { current: '', image: '7.png', filters: 'books'},
+                  { current: '', image: '8.png', filters: 'clothes'},
+                  { current: '', image: '9.png', filters: 'home'},
+                  { current: '', image: '10.png', filters: 'hobby'},
+                  { current: '', image: '11.png', filters: 'sports'},
+                  { current: '', image: '12.png', filters: 'cafes'},
+                  { current: 'current', image: '13.png', filters: 'electronics'},
+                  { current: '', image: '14.png', filters: 'perfumery'},
+                  { current: '', image: '1.png', filters: 'kids'},
+                  { current: '', image: '2.png', filters: 'beauty'},
+                  { current: '', image: '3.png', filters: 'gifts'},
+                  { current: '', image: '4.png', filters: 'accessories'},
+                  { current: '', image: '5.png', filters: 'books'},
+                  { current: '', image: '6.png', filters: 'clothes'},
+                  { current: '', image: '7.png', filters: 'home'},
+                  { current: '', image: '8.png', filters: 'hobby'},
+                  { current: '', image: '9.png', filters: 'sports'},
+                  { current: '', image: '10.png', filters: 'cafes'},
+                  { current: 'current', image: '11.png', filters: 'electronics'},
+                  { current: '', image: '12.png', filters: 'perfumery'},
+                  { current: '', image: '13.png', filters: 'kids'},
+                  { current: '', image: '14.png', filters: 'beauty'},                  
+                  { current: '', image: '1.png', filters: 'gifts'},
+                  { current: '', image: '2.png', filters: 'accessories'},
+                  { current: '', image: '3.png', filters: 'books'},
+                  { current: '', image: '4.png', filters: 'clothes'},
+                  { current: '', image: '5.png', filters: 'home'},
+                  { current: '', image: '6.png', filters: 'accessories'},
+                  { current: '', image: '7.png', filters: 'books'},
+                  { current: '', image: '8.png', filters: 'clothes'},
+                  { current: '', image: '9.png', filters: 'home'},
+                  { current: '', image: '10.png', filters: 'hobby'},
+                  { current: '', image: '11.png', filters: 'sports'},
+                  { current: '', image: '12.png', filters: 'cafes'},
+                  { current: 'current', image: '13.png', filters: 'electronics'},
+                  { current: '', image: '14.png', filters: 'perfumery'}
+                ]
+              - each post in items_filter
+                div(class="item #{post.current}" data-filter="#{post.filters}")
+                  .image: a(href="#"): img(src="images/certificates/#{post.image}" alt="")
+      footer.m_footer
+        .top
+          .wrapper
+            .column
+              .logo: a(href="#")
+              p Продажа сертификатов с доставкой<br>по всей России
+              .email Пишите: <a href="#">email@email.com</a>
+            .column.second
+              .questions Остались вопросы?
+              p Задайте их по бесплатному телефону
+              .tel: a(href="#") 8 (800) 800 80 80
+              p Или закажите бесплатный звонок, <br>и мы свяжемся с вами в ближайшее время
+              .action
+                a(class="get-popup" href="#popup-callback" data-title="заказать обратный звонок") Заказать звонок
+        .bottom.center
+          .wrapper
+            .policy: a(href="#") Политика конфиденциальности
+            .dev Разработано в <a href="http://lp.mango-media.ru/">Mango Media</a>
+      .m_popup
+        a(class="get-popup success-trigger" href="#popup-success")
+        #popup-success.mfp-hide.popup
+          .m_default-form
+            h1.center
+              b Спасибо за заявку!
+              span.light.small Менеджер свяжется с вами по указанному телефону для уточнения деталей заказа и стоимости
+            .close
+              a(href="#") Закрыть
+        #popup-action.mfp-hide.popup
+          .m_default-form
+            h1.center.b-line.orange
+              b Активация
+              span.light.small введите номер и ПИН <br>вашего мультибрендового сертификата
+            form(class="form")
+              .form-label
+                input(type="text" placeholder='Номер сертификата' name='name' class="form-input" value="1" required="required")
+              .form-label
+                input(type="text" placeholder='ПИН' name='pin' class="form-input" value="1" required="required")
+              input(type="submit" class="form-submit" value='Активировать')
+        #popup-license.mfp-hide.popup
+          h2 Условия использования
+          p Сертификат предназначен и может быть использован исключительно для приобретения товаров в розничных магазинах cети «Эльдорадо». Адреса точек приема сертификатов «Эльдорадо» можно уточнить по номеру телефона Контактного центра: 8 800 250 25 25 (звонок бесплатный).
+          p Срок действия Сертификата составляет два года со дня его активации. Cрок активации сертификата составляет 2 рабочих дня после получения.
+          p Использование Сертификата возможно при покупке товаров в сети магазинов «Эльдорадо» путем сообщения Потребителем правильного ПИН-кода и номера Сертификата сотруднику кассовой зоны и внесении соответствующих данным сотрудником кассовой зоны на кассе, а также при покупке в интернет-магазине на сайте www.eldorado.ru в случае самостоятельного вывоза товара из любого магазина сети «Эльдорадо», а также пунктов самовывоза. Подарочный сертификат обмену и возврату не подлежит.
+          p Сертификат действует на предъявителя (не является именным), и любое физическое лицо, предъявившее Сертификат, может приобрести с его помощью товар в магазинах сети «Эльдорадо».
+          p Внесение денежных средств на Сертификат возможно только один раз в момент его приобретения.
+          p Номинал Сертификата является суммой внесенных Покупателем денежных средств, которую держатель Сертификата может использовать для оплаты товара в магазинах «Эльдорадо».
+          p Сумма внесенного аванса, указанная на Сертификате, может быть использована Держателем при покупке Товаров однократно. В случае выбора товара на сумму меньше номинала Сертификата, остаток номинала сгорает. В том случае, если стоимость товара превышает номинал Сертификата, разница между стоимостью товара и номиналом Сертификата оплачивается наличными денежными средствами, либо с использованием платежных банковских карт, либо с использованием подарочных карт «Эльдорадо».
+          p Сертификат не может быть использован для получения наличных денежных средств из кассы Магазинов. Сертификатом можно оплатить любые товары/услуги, кроме: платежей по системам Киберплат, Дельтателеком; платежей по системе Рапида; коммунальных платежей; денежных переводов; ГОСЛОТО; Подарочной карты; также запрещено проводить оплату Сертификатом первоначального взноса по кредиту при приобретении покупателем товара/услуги в кредит.
+          p С использованием Сертификата возможна единственная покупка (транзакция по оплате товара (ов) в одном чеке). При совершении покупки номинал сертификата списывается целиком. Возврат, обмен купленного с использованием Сертификата товара, осуществляется в соответствии с Законом РФ «О защите прав потребителей». В случае удовлетворения требования потребителя о расторжении договора купли-продажи товара, возврат средств осуществляется на новую пластиковую подарочную карту «Эльдорадо» гибкого номинала.
+          p Телефон Контактного центра: 8 800 250 25 25 (звонок бесплатный). Подробности на сайте: www.eldorado.ru
+          .bottom
+            .action: a(class="choose-cancel" href="#") Отмена
+            .action: a(class="choose-submit" href="#") Принять
+        a(class="get-popup-action" id="limit-trigger" href="#popup-limit")
+        #popup-limit.mfp-hide.popup
+          h2 Превышен лимит средств!  
+        #popup-cards.mfp-hide.popup     
+          h2 Выбранные сертификаты
+          p.no-items У вас нет выбранных сертификатов...
+          .items
+        a(class="get-popup-action" id="rem-trigger" href="#popup-remaining")
+        #popup-remaining.mfp-hide.popup
+          h2 Внимание!
+          p Сертификат может быть активирован только 1 раз.
+          .remaining Осталось:  <span><b></b> руб.</span>
+          .action
+            .cancel: a(href="#") Продолжить выбор
+            .submit: a(href="#") Отказаться от остатка
+        #popup-callback.mfp-hide.popup
+          .m_default-form
+            h1.center.b-line.orange
+              b Заполните форму
+              span.light.small чтобы <span id="modal-title">заказать обратный звонок</span>
+            form(action="form.php" method='post' class="form")
+              .form-label
+                input(type="text" placeholder='Ваше имя' name='name' class="form-input" required="required")
+              .form-label
+                input(type="tel" placeholder='Ваш номер телефона' name='tel' class="form-input" required="required")
+              input(type="hidden" name='input_type')
+              input(type="submit" class="form-submit" value='Воспользоваться предложением')
+            .safe Ваши данные в полной безопасноти
+    #menu
+      ul
+        li: hr
+        li: a(class="anchor" href="index.html#s1") Сертификаты
+        li: a(href="partners.html") Каталог партнеров
+        li: a(class="anchor" href="index.html#s2") Электронная витрина
+        li: a(class="anchor" href="index.html#s3") О компании
+        li: a(class="anchor" href="index.html#s4") Кейсы
+        li: a(class="anchor" href="index.html#s5") Схема работы
+        li: a(class="anchor" href="index.html#s6") Контакты
+        li: hr
+        li: a(class="get-popup-action" href="#popup-action") Активация сертификатов
+        li: a(href="mobilecard.html") Карты мобильной связи
+    script(src="js/jquery.min.js")
+    script(src="js/plugins.js")
+    script(src="js/app.js")

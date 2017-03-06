@@ -1,0 +1,211 @@
+doctype html
+html(lang="ru").no-js
+  head
+    title Cards
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="css/plugins.css")
+    link(rel="stylesheet" href="css/app.min.css")
+  body
+    .m_header
+      .wrapper
+        .logo: a(href="index.html")  
+        .contacts
+          .vertical-outer
+            .vertical-inner
+              //- span.action: a(class="get-popup-action" href="#popup-action") Активация
+              span.sidebarmenu: a(href="#menu"): span
+    #page.content
+      .m_activate-cards
+        .step-1
+          .lead
+            .wrapper
+              .vertical-outer
+                .vertical-inner                  
+                  .image: img(src="images/hotcard_certificate.png" alt="")
+                  .desc
+                    h1.b-line.orange: b Универсальный сертификат
+                    p Для активации обменяйте ваш универсальный сертификат <br>на сертификаты из списка (не более 10 шт.)
+                    .selected
+                      .label Выбрано:
+                      .value: a(class="get-popup-action" href="#popup-cards") <span id="total-items">0</span> сертификатов
+                    .remained
+                      .label Осталось:
+                      .value <span id="total-sum" data-client-sum="10000"></span> руб.
+                    .next-step: a(href="#") Продолжить
+          .certificates-list
+            .wrapper
+              .title
+                h2.b-line.orange: b Вам доступны сертификаты для разных видов услуг
+              .items
+                -
+                  var itemscerts = [
+                    { image: '1.png', title: 'Эльдорадо' },
+                    { image: '2.png', title: 'Евросеть' },
+                    { image: '3.png', title: 'Ozon.ru' },
+                    { image: '4.png', title: 'М.видео' },
+                    { image: '5.png', title: 'MediaMarkt' },
+                    { image: '6.png', title: 'Кораблик' },
+                    { image: '7.png', title: 'Lush' },
+                    { image: '8.png', title: 'Детский мир' },
+                    { image: '9.png', title: 'Topbrands' },
+                    { image: '10.png', title: 'Дикая орхидея' },
+                    { image: '11.png', title: 'Wildberries' },
+                    { image: '12.png', title: 'Книжный Москва' },
+                    { image: '13.png', title: 'Hoff' },
+                    { image: '14.png', title: 'Юлмарт' },
+                    { image: '1.png', title: 'Эльдорадо' },
+                    { image: '2.png', title: 'Евросеть' },
+                    { image: '3.png', title: 'Ozon.ru' },
+                    { image: '4.png', title: 'М.видео' },
+                    { image: '5.png', title: 'MediaMarkt' },
+                    { image: '6.png', title: 'Кораблик' },
+                    { image: '7.png', title: 'Lush' },
+                    { image: '8.png', title: 'Детский мир' },
+                    { image: '9.png', title: 'Topbrands' },
+                    { image: '10.png', title: 'Дикая орхидея' },
+                    { image: '11.png', title: 'Wildberries' },
+                    { image: '12.png', title: 'Книжный Москва' },
+                    { image: '13.png', title: 'Hoff' },
+                    { image: '14.png', title: 'Юлмарт' }
+                  ]
+                - each post in itemscerts
+                  .item
+                    .image
+                      img(src="images/certificates/#{post.image}" alt="" data-title="#{post.title}")
+                    .desc
+                      .top
+                        .text Номинал:
+                        .prices
+                          select
+                            option(value="300") 300
+                            option(value="400") 400
+                            option(value="500") 500
+                            option(value="1000") 1 000
+                            option(value="1500") 1 500
+                            option(value="2000") 2 000
+                            option(value="3000") 3 000
+                            option(value="4000") 4 000
+                            option(value="6000") 6 000
+                            option(value="10000") 10 000
+                      .bottom: a(class="get-popup-action" href="#popup-license") Выбрать
+        .step-2
+          .lead
+            .wrapper
+              .vertical-outer
+                .vertical-inner                  
+                  .image
+                    img(src="images/hotcard_certificate.png" alt="")
+                    .attention.remaining-balance <b>Внимание:</b> остаток средств (<b id="remaining-balance"></b> руб.) сгорает и не может быть использован в дальнейшем.
+                  .desc
+                    h1.b-line.orange: b Активация сертификата
+                    p Обмен сертификата <b id="initial-sum"></b> рублей
+                    p Выбранные сертификаты:
+                    ol.selected-certificates                           
+                    form
+                      .form-row
+                        input(type="email" placeholder="Введите Ваш e-mail")  
+                      .form-row
+                        .submit: button(type="submit") Подтвердить      
+                        .backward: a(href="#") Назад
+                    .remark Нажимая «Подтвердить», Вы принимаете <a href="#">условия оферты</a>.
+      footer.m_footer
+        .top
+          .wrapper
+            .column
+              .logo: a(href="#")
+              p Продажа сертификатов с доставкой<br>по всей России
+              .email Пишите: <a href="#">email@email.com</a>
+            .column.second
+              .questions Остались вопросы?
+              p Задайте их по бесплатному телефону
+              .tel: a(href="#") 8 (800) 800 80 80
+              p Или закажите бесплатный звонок, <br>и мы свяжемся с вами в ближайшее время
+              .action
+                a(class="get-popup" href="#popup-callback" data-title="заказать обратный звонок") Заказать звонок
+        .bottom.center
+          .wrapper
+            .policy: a(href="#") Политика конфиденциальности
+            .dev Разработано в <a href="http://lp.mango-media.ru/">Mango Media</a>
+      .m_popup
+        a(class="get-popup success-trigger" href="#popup-success")
+        #popup-success.mfp-hide.popup
+          .m_default-form
+            h1.center
+              b Спасибо за заявку!
+              span.light.small Менеджер свяжется с вами по указанному телефону для уточнения деталей заказа и стоимости
+            .close
+              a(href="#") Закрыть
+        #popup-action.mfp-hide.popup
+          .m_default-form
+            h1.center.b-line.orange
+              b Активация
+              span.light.small введите номер и ПИН <br>вашего мультибрендового сертификата
+            form(class="form")
+              .form-label
+                input(type="text" placeholder='Номер сертификата' name='name' class="form-input" value="1" required="required")
+              .form-label
+                input(type="text" placeholder='ПИН' name='pin' class="form-input" value="1" required="required")
+              input(type="submit" class="form-submit" value='Активировать')
+        #popup-license.mfp-hide.popup
+          h2 Условия использования
+          p Сертификат предназначен и может быть использован исключительно для приобретения товаров в розничных магазинах cети «Эльдорадо». Адреса точек приема сертификатов «Эльдорадо» можно уточнить по номеру телефона Контактного центра: 8 800 250 25 25 (звонок бесплатный).
+          p Срок действия Сертификата составляет два года со дня его активации. Cрок активации сертификата составляет 2 рабочих дня после получения.
+          p Использование Сертификата возможно при покупке товаров в сети магазинов «Эльдорадо» путем сообщения Потребителем правильного ПИН-кода и номера Сертификата сотруднику кассовой зоны и внесении соответствующих данным сотрудником кассовой зоны на кассе, а также при покупке в интернет-магазине на сайте www.eldorado.ru в случае самостоятельного вывоза товара из любого магазина сети «Эльдорадо», а также пунктов самовывоза. Подарочный сертификат обмену и возврату не подлежит.
+          p Сертификат действует на предъявителя (не является именным), и любое физическое лицо, предъявившее Сертификат, может приобрести с его помощью товар в магазинах сети «Эльдорадо».
+          p Внесение денежных средств на Сертификат возможно только один раз в момент его приобретения.
+          p Номинал Сертификата является суммой внесенных Покупателем денежных средств, которую держатель Сертификата может использовать для оплаты товара в магазинах «Эльдорадо».
+          p Сумма внесенного аванса, указанная на Сертификате, может быть использована Держателем при покупке Товаров однократно. В случае выбора товара на сумму меньше номинала Сертификата, остаток номинала сгорает. В том случае, если стоимость товара превышает номинал Сертификата, разница между стоимостью товара и номиналом Сертификата оплачивается наличными денежными средствами, либо с использованием платежных банковских карт, либо с использованием подарочных карт «Эльдорадо».
+          p Сертификат не может быть использован для получения наличных денежных средств из кассы Магазинов. Сертификатом можно оплатить любые товары/услуги, кроме: платежей по системам Киберплат, Дельтателеком; платежей по системе Рапида; коммунальных платежей; денежных переводов; ГОСЛОТО; Подарочной карты; также запрещено проводить оплату Сертификатом первоначального взноса по кредиту при приобретении покупателем товара/услуги в кредит.
+          p С использованием Сертификата возможна единственная покупка (транзакция по оплате товара (ов) в одном чеке). При совершении покупки номинал сертификата списывается целиком. Возврат, обмен купленного с использованием Сертификата товара, осуществляется в соответствии с Законом РФ «О защите прав потребителей». В случае удовлетворения требования потребителя о расторжении договора купли-продажи товара, возврат средств осуществляется на новую пластиковую подарочную карту «Эльдорадо» гибкого номинала.
+          p Телефон Контактного центра: 8 800 250 25 25 (звонок бесплатный). Подробности на сайте: www.eldorado.ru
+          .bottom
+            .action: a(class="choose-cancel" href="#") Отмена
+            .action: a(class="choose-submit" href="#") Принять
+        a(class="get-popup-action" id="limit-trigger" href="#popup-limit")
+        #popup-limit.mfp-hide.popup
+          h2 Превышен лимит средств!  
+        #popup-cards.mfp-hide.popup     
+          h2 Выбранные сертификаты
+          p.no-items У вас нет выбранных сертификатов...
+          .items
+        a(class="get-popup-action" id="rem-trigger" href="#popup-remaining")
+        #popup-remaining.mfp-hide.popup
+          h2 Внимание!
+          p Сертификат может быть активирован только 1 раз.
+          .remaining Осталось:  <span><b></b> руб.</span>
+          .action
+            .cancel: a(href="#") Продолжить выбор
+            .submit: a(href="#") Отказаться от остатка
+        #popup-callback.mfp-hide.popup
+          .m_default-form
+            h1.center.b-line.orange
+              b Заполните форму
+              span.light.small чтобы <span id="modal-title">заказать обратный звонок</span>
+            form(action="form.php" method='post' class="form")
+              .form-label
+                input(type="text" placeholder='Ваше имя' name='name' class="form-input" required="required")
+              .form-label
+                input(type="tel" placeholder='Ваш номер телефона' name='tel' class="form-input" required="required")
+              input(type="hidden" name='input_type')
+              input(type="submit" class="form-submit" value='Воспользоваться предложением')
+            .safe Ваши данные в полной безопасноти
+    #menu
+      ul
+        li: hr
+        li: a(class="anchor" href="index.html#s1") Сертификаты
+        li: a(href="partners.html") Каталог партнеров
+        li: a(class="anchor" href="index.html#s2") Электронная витрина
+        li: a(class="anchor" href="index.html#s3") О компании
+        li: a(class="anchor" href="index.html#s4") Кейсы
+        li: a(class="anchor" href="index.html#s5") Схема работы
+        li: a(class="anchor" href="index.html#s6") Контакты
+        li: hr
+        li: a(class="get-popup-action" href="#popup-action") Активация сертификатов
+        li: a(href="mobilecard.html") Карты мобильной связи
+    script(src="js/jquery.min.js")
+    script(src="js/plugins.js")
+    script(src="js/app.js")

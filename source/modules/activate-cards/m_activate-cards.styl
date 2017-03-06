@@ -1,0 +1,668 @@
+.m_activate-cards
+  .step-2
+    display none
+    .lead
+      position relative 
+      padding 100px 0
+      @media screen and (max-width: 992px)
+        padding 50px 0
+      .image, .desc
+        float left
+        @media screen and (max-width: 568px)
+          float none
+      .image
+        width 42%
+        padding-right 2%
+        @media screen and (max-width: 568px)
+          padding-right 0
+          width 100%
+          margin-bottom 20px
+        img
+          display block
+          width 100%
+          height auto
+          box-shadow: -6px 8px 13px rgba(0,0,0,.17)
+          border-radius 20px
+        .attention
+          padding-top 30px
+          padding-left 5px
+          padding-right 70px
+      .desc
+        width 58%
+        @media screen and (max-width: 568px)
+          width 100%
+      .desc
+        color #444444
+        position relative 
+        h1
+          padding-top 0
+          padding-bottom 50px
+          &:after
+            left 0
+            margin-left 0
+            @media screen and (max-width: 568px)
+              bottom 25px
+        p
+          margin-bottom 15px
+        .selected-certificates
+          list-style decimal inside none
+          margin-bottom 85px
+          @media screen and (max-width: 992px)  
+            margin-bottom 30px
+          li
+            font-family: ProximaNova-Bold;
+            font-weight: 400;
+            font-style: normal;
+            padding 2px 0
+        .remark
+          margin-top -15px
+          a
+            font-family: ProximaNova-Bold;
+            font-weight: 400;
+            font-style: normal;
+            color #333
+            text-decoration underline
+            &:hover
+              color #ff5b0b
+        form
+          width 460px
+          @media screen and (max-width: 840px)
+            width 100%
+          input
+            width: 100%;
+            height: 50px;
+            border: 1px solid #e7e7e7;
+            color: #96b1bc;
+            background: #f4f4f4;
+            text-align left
+            display: block;
+            margin: 0;
+            font-size: 16px;
+            outline: 0;
+            border-radius: 50px;
+            padding-left 30px
+            padding-right 30px            
+          .form-row
+            clearfix()
+            margin-bottom 30px
+            @media screen and (max-width: 450px)
+              margin-bottom 15px
+          .submit
+            float right
+            width 215px
+            height 52px
+            @media screen and (min-width: 568px) and (max-width: 768px)
+              width auto
+            @media screen and (max-width: 450px)
+              width 100%
+              float none
+              margin-bottom 15px
+          .submit button
+            -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            -o-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            transition: all .15s cubic-bezier(.33,.66,.66,1);
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            border: 1px solid #ee2840;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 52px;
+            -webkit-box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            background: #ee2840;
+            color: #fff;    
+            @media screen and (min-width: 568px) and (max-width: 768px)
+              padding-left 20px
+              padding-right 30px
+              width auto        
+            &:after
+              content ''
+              background: url('../images/sprite.png') no-repeat -70px -264px;
+              width: 24px;
+              height: 17px;
+              position absolute
+              right 19px
+              top 15px
+              @media screen and (min-width: 568px) and (max-width: 768px)
+                right 10px
+            &:hover
+              background: #db112a;
+              border-color: #db112a;
+          .backward
+            float left
+            width 180px
+            height 52px
+            @media screen and (min-width: 568px) and (max-width: 768px)
+              width auto
+            @media screen and (max-width: 450px)
+              width 100%
+              float none
+              margin-bottom 25px
+          .backward a
+            -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            -o-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            transition: all .15s cubic-bezier(.33,.66,.66,1);
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            border: 1px solid #ee2840;
+            text-transform: uppercase;
+            color: #ee2840;
+            text-align: center;
+            line-height: 52px;
+            -webkit-box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            @media screen and (min-width: 568px) and (max-width: 768px)
+              padding-left 20px
+              padding-right 30px
+              width auto
+            &:after
+              content: '';
+              background: url(../images/sprite.png) no-repeat -104px -289px;
+              width: 7px;
+              height: 11px;
+              position: absolute;
+              right: 25px;
+              top: 50%;
+              margin-top: -5.5px;
+              @media screen and (min-width: 568px) and (max-width: 768px)
+                right 10px
+            &:hover
+              background: #ee2840;
+              color: #fff;
+              &:after
+                background-position: -82px -270px;
+  .step-1
+    .lead
+      position relative 
+      height 475px
+      box-shadow -12px 8px 20px rgba(0,0,0,.2)
+      background: #87bebb;
+      background: -webkit-gradient(left top,right top,color-stop(0,#87bebb),color-stop(100%,#467aa8));
+      background: -webkit-linear-gradient(left,#87bebb 35%,#467aa8 100%);
+      background: -o-linear-gradient(left,#87bebb 35%,#467aa8 100%);
+      background: -webkit-gradient(linear,left top,right top,from(#87bebb),to(#467aa8));
+      background: linear-gradient(to right,#87bebb 35%,#467aa8 100%);
+      @media screen and (max-width: 568px)
+        height auto
+        padding 20px 0
+      .image, .desc
+        float left
+        @media screen and (max-width: 568px)
+          float none
+      .image
+        width 42%
+        padding-right 2%
+        @media screen and (max-width: 568px)
+          padding-right 0
+          width 100%
+          margin-bottom 20px
+        img
+          display block
+          width 100%
+          height auto
+          box-shadow: -6px 8px 13px rgba(0,0,0,.17)
+          border-radius 20px
+      .desc
+        width 58%
+        @media screen and (max-width: 568px)
+          width 100%
+      .desc
+        color #fff
+        position relative 
+        h1
+          padding-top 0
+          padding-bottom 50px
+          &:after
+            left 0
+            margin-left 0
+            @media screen and (max-width: 568px)
+              bottom 25px
+        p
+          margin-bottom 25px
+        .selected,
+        .remained
+          .label
+            display block
+            font-size 18px
+        .selected
+          margin-bottom 30px
+          .value
+            a
+             display inline-block
+             vertical-align middle 
+             color #ee2840
+             border-bottom 1px dashed #ee2840
+             &:hover
+               color #fff
+               border-color #fff
+        .remained
+          .value
+            font-size 24px
+            span
+              font-size 30px
+              font-family: ProximaNova-Bold;
+        .next-step
+          display none
+          width 190px
+          height 60px
+          position absolute
+          right 50px
+          bottom 0
+          @media screen and (max-width: 750px)
+            position static
+            margin-top 10px
+            margin-left -10px
+          a
+            -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            -o-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            transition: all .15s cubic-bezier(.33,.66,.66,1);
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            border: 1px solid #ee2840;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 58px;
+            -webkit-box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            background: #ee2840;
+            color: #fff;
+            padding-right 10px
+            &:after
+              content ''
+              background: url('../images/sprite.png') no-repeat -70px -264px;
+              width: 24px;
+              height: 17px;
+              position absolute
+              right 19px
+              top 17px
+            &:hover
+              background: #db112a;
+              border-color: #db112a;
+    .certificates-list
+      padding 50px 0
+      background #f4f4f4
+      .title
+        text-align center
+        h2
+          position relative 
+          color #444444
+          text-transform uppercase
+          font-size 24px
+          font-family: ProximaNova-Bold;
+          font-weight: 400;
+          font-style: normal;
+          padding-bottom 50px
+          &:after
+            bottom 30px
+      .items
+        clearfix()
+        .item
+          position relative 
+          float left
+          width 23%
+          height 160px
+          line-height 160px
+          background #ffffff
+          margin-left 2.5%
+          margin-bottom 2.5%
+          border-radius 10px
+          border 1px solid #cecece
+          box-shadow: -6px 8px 13px rgba(0,0,0,.17)
+          @media screen and (min-width: 993px)
+            &:nth-child(4n+1)
+              margin-left 0
+              clear left
+          @media screen and (max-width: 992px)
+            width 31.5%
+          @media screen and (min-width: 751px) and (max-width: 992px)
+            &:nth-child(3n+1)
+              margin-left 0
+              clear left
+          @media screen and (max-width: 750px)
+            width 48.5%
+            &:nth-child(2n+1)
+              margin-left 0
+              clear left
+          @media screen and (max-width: 360px)
+            margin-left 0
+            width 100%
+          &:hover,
+          &.focused
+            .desc
+              display block
+          .desc
+            display none
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+            background rgba(0,0,0,.7)
+            color #fff
+            line-height 1
+            padding 30px
+            border-radius 10px
+            @media screen and (max-width: 1200px)
+              padding 30px 10px
+            @media screen and (max-width: 500px)
+              padding 10px
+            .top
+              height 34px
+              line-height 34px
+              text-align center
+              margin-bottom 25px
+              @media screen and (max-width: 500px)
+                height auto
+              .text, .prices
+                display inline-block
+                vertical-align middle
+              .text
+                font-size 16px
+                float left
+                @media screen and (max-width: 500px)
+                  float none
+              .prices
+                float right
+                width 120px
+                @media screen and (max-width: 500px)
+                  float none
+                  width 100%
+                .selectric-items
+                  text-align left
+                  border-radius 0 0 15px 15px
+                  background #f4f4f4
+                  li
+                    padding 0 15px
+                    background none
+                    color #4e4e4e
+                    &:hover
+                      color #ff500f
+                .selectric-open
+                  .selectric
+                    border-radius 15px 15px 0 0
+                    border-bottom 1px solid #f4f4f4
+                  .selectric-items
+                    border-top 1px solid #f4f4f4
+                  &.selectric-above
+                    .selectric
+                      border-top 1px solid #f4f4f4
+                      border-radius 0 0 15px 15px
+                    .selectric-items
+                      border-radius 15px 15px 0 0
+                      border-bottom 1px solid #f4f4f4
+                    
+                .selectric
+                  height 34px
+                  line-height 34px
+                  border-radius 15px
+                  background #f4f4f4
+                  color #444444
+                  font-size 14px
+                  text-align left
+                  padding-left 15px
+                  span.label
+                    line-height 34px
+                    height 34px
+                    margin-left 0
+                  .button
+                    width 34px
+                    height 34px
+                    font-size 0
+                    background #f4f4f4
+                    color transparent
+                    &:after
+                      display none
+                    &:before
+                      content ''
+                      position absolute
+                      right 10px
+                      top 50%
+                      background: url('../images/select-arrow.png') no-repeat 0 0
+                      width: 13px;
+                      height: 7px;
+                      margin-top -3.5px
+                
+            .bottom
+              height 40px
+              text-align center
+              a
+                -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+                -o-transition: all .15s cubic-bezier(.33,.66,.66,1);
+                transition: all .15s cubic-bezier(.33,.66,.66,1);
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50px;
+                border: 1px solid #ee2840;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 40px;
+                -webkit-box-shadow: 4px 0 20px rgba(0,0,0,.12);
+                box-shadow: 4px 0 20px rgba(0,0,0,.12);
+                background: #ee2840;
+                color: #fff;
+                &:hover
+                  background: #db112a;
+                  border-color: #db112a;
+          .image
+            text-align center
+            img
+              display inline-block
+              vertical-align middle
+              max-width 90%
+              max-height 90%
+  .mobilecard
+    .lead
+      position relative 
+      height 475px
+      box-shadow -12px 8px 20px rgba(0,0,0,.2)
+      background: #5aa172;
+      background: -webkit-gradient(left top,right top,color-stop(0,#5aa172),color-stop(25%,#5aa172),color-stop(100%,#1e5771));
+      background: -webkit-linear-gradient(left,#5aa172 0,#5aa172 25%,#1e5771 100%);
+      background: -o-linear-gradient(left,#5aa172 0,#5aa172 25%,#1e5771 100%);
+      background: -webkit-gradient(linear,left top,right top,from(#5aa172),color-stop(25%,#5aa172),to(#1e5771));
+      background: linear-gradient(to right,#5aa172 0,#5aa172 25%,#1e5771 100%); 
+      @media screen and (max-width: 568px)      
+        padding 20px 0
+        height auto
+      .image, .desc
+        float left
+        @media screen and (max-width: 568px)
+          float none
+      .image
+        width 42%
+        padding-right 2%
+        @media screen and (max-width: 568px)
+          padding-right 0
+          width 100%
+          margin-bottom 20px
+        img
+          display block
+          width 100%
+          height auto
+          box-shadow: -6px 8px 13px rgba(0,0,0,.17)
+          border-radius 20px
+      .desc
+        width 58%
+        @media screen and (max-width: 568px)
+          width 100%
+      .desc
+        color #fff
+        position relative 
+        h1
+          padding-top 0
+          padding-bottom 50px
+          &:after
+            left 0
+            margin-left 0
+            @media screen and (max-width: 568px)
+              bottom 25px
+            
+        form
+          max-width 460px
+          @media screen and (max-width: 568px)   
+            max-width none
+            width 100%
+          .form-row
+            clearfix()
+            margin-bottom 20px
+            &:last-child
+              margin-top 25px
+            .column
+              float left
+              width 50%
+              @media screen and (max-width: 700px) and (min-width: 569px)
+                width 100%
+                & + .column
+                  margin-top 20px
+              @media screen and (max-width: 420px)
+                width 100%
+                & + .column
+                  margin-top 20px
+              .picture
+                width 180px
+                @media screen and (max-width: 700px) and (min-width: 569px)
+                  width 100%
+                @media screen and (max-width: 420px)
+                  width 100%
+              
+          input
+            width: 100%;
+            height: 50px;
+            border: 1px solid #e7e7e7;
+            color: #96b1bc;
+            background: #f4f4f4;
+            text-align left
+            display: block;
+            margin: 0;
+            font-size: 16px;
+            outline: 0;
+            border-radius: 50px;
+            padding-left 20px
+            padding-right 20px
+          button
+            -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            -o-transition: all .15s cubic-bezier(.33,.66,.66,1);
+            transition: all .15s cubic-bezier(.33,.66,.66,1);
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            border: 1px solid #ee2840;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 52px;
+            -webkit-box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            box-shadow: 4px 0 20px rgba(0,0,0,.12);
+            background: #ee2840;
+            color: #fff;                 
+            &:hover
+              background: #db112a;
+              border-color: #db112a;
+            &:after
+              content ''
+              background: url('../images/sprite.png') no-repeat -70px -264px;
+              width: 24px;
+              height: 17px;
+              position absolute
+              right 19px
+              top 15px
+    .infohelp
+      padding 60px 0
+      .tabs
+        border-radius 10px        
+        background #fff
+        box-shadow 0 4px 20px rgba(27,27,27,.25)
+        overflow hidden
+        .tab-content
+          padding 60px 80px
+          @media screen and (max-width: 992px)
+            padding 30px 40px
+          @media screen and (max-width: 440px)
+            padding 15px 20px
+          .faq-item
+            & + .faq-item
+              margin-top 15px 
+          .faq-item-header
+            a
+              color #444444
+              font-size 18px
+              text-decoration underline
+              font-family: ProximaNova-Bold;
+              font-weight: 400;
+              font-style: normal;
+              @media screen and (max-width: 440px)
+                font-size 16px
+              &.open,
+              &:hover
+                color #ff500f
+                text-decoration none
+          .faq-item-body
+            padding 5px 15px
+            font-size 16px
+            line-height 1.2
+            color #444444
+            display none
+            @media screen and (max-width: 440px)
+              font-size 15px
+        .tab-header
+          background: #e66110;
+          background: -webkit-gradient(left top,right top,color-stop(0,#e66110),color-stop(50%,#e66110),color-stop(100%,#c92914));
+          background: -webkit-linear-gradient(left,#e66110 0,#e66110 50%,#c92914 100%);
+          background: -o-linear-gradient(left,#e66110 0,#e66110 50%,#c92914 100%);
+          background: -webkit-gradient(linear,left top,right top,from(#e66110),color-stop(50%,#e66110),to(#c92914));
+          background: linear-gradient(to right,#e66110 0,#e66110 50%,#c92914 100%);
+          font-size 0
+          .item
+            font-size 22px
+            display inline-block
+            vertical-align middle
+            @media screen and (max-width: 440px)
+              width 32%
+              text-align center
+            &.current a
+              color #fff
+              text-decoration none
+              font-family: ProximaNova-Bold;
+            a
+              display inline-block
+              vertical-align middle
+              padding 30px 80px
+              color #fff
+              font-family: ProximaNova-Regular;
+              font-weight: 400;
+              font-style: normal;
+              text-decoration underline
+              font-size 20px
+              text-transform uppercase
+              @media screen and (max-width: 992px)
+                padding 20px 40px
+              @media screen and (max-width: 700px)
+                padding 20px 20px
+              @media screen and (max-width: 600px)
+                font-size 18px
+              @media screen and (max-width: 500px)
+                padding 20px 10px
+              @media screen and (max-width: 440px)
+                padding 10px 20px
+              @media screen and (max-width: 440px)
+                font-size 16px
+                padding-left 0
+                padding-right 0
+              @media screen and (max-width: 360px)
+                font-size 15px
+              &:hover
+                color #fff
+                text-decoration none
+    

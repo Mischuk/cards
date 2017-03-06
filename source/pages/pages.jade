@@ -1,0 +1,71 @@
+- var project = "Hot Card"
+
+-
+  var list = [
+    { title: 'Главная', url: 'home.html' },
+    { title: 'Активация универсального сертификата', url: 'multisertificate.html' },
+    { title: 'Активация карты оплаты мобильной связи', url: 'mobilecard.html' },
+    { title: 'Партнеры', url: 'partners.html' }
+  ]
+
+doctype html
+html(lang="ru")
+head
+  title= project
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  meta(name="msapplication-tap-highlight" content="no")
+  link(href="https://fonts.googleapis.com/css?family=Cuprum&subset=cyrillic" rel="stylesheet")
+  style.
+    body {
+      height: 100%;
+      font-family: 'Cuprum', sans-serif;
+      font-size: 24px;
+      margin: 0;
+      background: #fff;
+    }
+
+    h1 {
+      font-family: 'Cuprum', sans-serif;
+      background: #3b3a36;
+      padding: 40px 20px;
+      color: #fff;
+      margin: 0;
+      border-bottom: 20px solid #fff;
+    }
+
+    h2 {
+      font-weight: normal;
+      cursor: default;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 0;
+      margin-left: 20px;
+      overflow: hidden;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      transition: color .15s ease-in;
+      color: #312c32;
+      text-decoration: none;
+      display: inline-block;
+      padding: 5px 0;
+    }
+
+    a:hover {
+      color: #ef284b;
+    }
+
+body
+  h1= project
+  ul
+    -each post in list
+      li
+         a(href =post.url) #{post.title}

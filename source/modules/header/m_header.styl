@@ -1,5 +1,6 @@
 .m_header
-  position fixed
+  // display none
+  // position fixed
   left 0
   top 0
   width 100%
@@ -14,12 +15,10 @@
       .contacts
         display none
       .logo
-        transform translateY(10px)
+        transform translateY(3px)
       .menu
         @media screen and (max-width: 460px)
-          top 72px
-  @media screen and (max-width: 460px)
-    height 115px
+          top 72px  
   .logo, .contacts
     position absolute
     top 0
@@ -29,29 +28,34 @@
     width 170px
     line-height 72px
     text-align left
-    @media screen and (max-width: 460px)
-      left 50%
-      margin-left -85px
-      line-height 50px
+    //@media screen and (max-width: 460px)
+    //  left 50%
+    //  margin-left -85px
+    //  line-height 50px
+    //  text-align center
     a
       display inline-block
       vertical-align middle
-      background: url('../images/sprite.png') no-repeat 0 0;
+      background: url('../images/logo_.png') no-repeat 0 0;
+      background-size contain
       width: 148px;
-      height: 33px;
+      height: 65px;
+      @media screen and (max-width: 360px)
+        background-position center
+        width 90px
   .contacts
     right 15px
-    width 220px
+    // width 220px
     height 100%
-    display table
+    display table    
+    //@media screen and (max-width: 460px)
+    //  width 100%
+    //  right 0
+    //  margin-right 0
+    //  text-align center
+    //  padding-top 50px
     @media screen and (max-width: 1200px)
-      margin-right 25px
-    @media screen and (max-width: 460px)
-      width 100%
       right 0
-      margin-right 0
-      text-align center
-      padding-top 50px
     .tel
       a
         bold()
@@ -71,6 +75,25 @@
         &:hover
           color $orange
           border-color #fff
+    .action
+      display inline-block
+      vertical-align middle
+      line-height 50px
+      height 50px
+      border-right 1px solid #e3e3e3
+      padding-right 30px
+      margin-right 60px
+      @media screen and (max-width: 360px)
+        margin-right 50px
+        padding-right 15px
+      a
+        color #333
+        text-decoration underline
+        text-transform uppercase
+        font-size 16px
+        &:hover
+          color #ff5a0b
+      
   .menu
     height 50px
     padding 11px 220px 11px 170px
@@ -130,3 +153,51 @@
           padding 0 10px
           &:hover
             color $orange
+.mm-menu
+  background #fff
+.mm-navbar .mm-btn:first-child
+  left auto
+  right 90px
+  @media screen and (max-width: 460px)
+    right 30px
+.mm-close:after, 
+.mm-close:before
+  display none
+.mm-close
+  width 22px
+  height 20px
+  background url("../images/close.png") no-repeat 0 0
+  top 25px
+.mm-menu>.mm-navbar
+  border none
+.mm-listview
+  text-align right
+  padding-right 90px
+  @media screen and (max-width: 460px)
+    padding-right 15px
+    padding-left 15px
+  li
+    &:first-child
+      hr
+        margin-top 0
+    hr
+      max-width 230px
+      border none
+      height 1px
+      max-width 230px
+      background #e3e3e3
+      margin-right auto
+      display block
+      margin 0
+      margin-top 25px
+      margin-bottom 25px
+      margin-left auto
+    a
+      display inline-block
+      vertical-align middle
+      padding 12px 0
+      color #444444
+      font-size 16px
+      text-transform uppercase
+      &:hover
+        color #ff5a0b

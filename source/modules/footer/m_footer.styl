@@ -1,10 +1,24 @@
+html.stack-footer
+  height 100%
+  body, .mm-page
+    height 100%
+  .m_footer
+    position absolute
+    left 0
+    bottom 0
+    width 100%
 .m_footer
-  color #fff
-  background url("../images/m_s14/bg.jpg") no-repeat 50%
-  background-size cover
+  color #fff  
+  height 570px  
+  width 100%
+  background #383838
+  @media screen and (min-width: 701px) 
+    height 385px      
   .wrapper
     height 100%
   .top
+    background url("../images/m_s14/bg.jpg") no-repeat 50%
+    background-size cover
     height 310px
     padding 40px 0
     @media screen and (max-width: 768px)
@@ -15,18 +29,20 @@
     @media screen and (max-width: 568px)
       padding-bottom 0
     .logo
-      margin-bottom 45px
+      margin-bottom 25px
       @media screen and (max-width: 700px)
         text-align center
       @media screen and (max-width: 568px)
         margin-bottom 25px
       a
         display block
-        background: url('../images/sprite.png') no-repeat -186px 0;
+        background: url('../images/logo_.png') no-repeat 0 0;
+        background-size contain
         width: 237px;
-        height: 53px;
+        height: 100px;
         @media screen and (max-width: 700px)
           margin 0 auto
+          background-position center
     .logo + p
       font-size 22px
       @media screen and (max-width: 700px)
